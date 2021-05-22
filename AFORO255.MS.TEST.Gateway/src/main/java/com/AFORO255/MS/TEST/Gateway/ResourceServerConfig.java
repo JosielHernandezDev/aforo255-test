@@ -36,8 +36,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/api/security/oauth/**").permitAll()
 		.antMatchers(HttpMethod.GET,"/api/account/listar","/api/account/ver/{id}"
 				,"/api/historical/listar", "/api/historical/transaction/{accountId}").permitAll()
-		.antMatchers("/api/deposit/**").permitAll()
-		.antMatchers("/api/withdrawal/**").permitAll()
+		.antMatchers("/api/pay/**").permitAll()
+		.antMatchers("/api/invoice/**").permitAll()
 		.anyRequest().authenticated().and().cors()
 		.configurationSource(configurationSource());
 		

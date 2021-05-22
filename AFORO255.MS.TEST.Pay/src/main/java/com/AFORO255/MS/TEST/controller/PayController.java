@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
-@RequestMapping("/v1/payevent")
 public class PayController {
 	@Autowired
 	private IPayService service;
@@ -48,8 +47,4 @@ public class PayController {
 		return service.findAll();
 	}
 
-	@GetMapping("/")
-	public String homeInit() {
-		return "home";
-	}
 }
