@@ -1,9 +1,11 @@
-package com.AFORO255.MS.TEST.Invoice;
+package com.AFORO255.MS.TEST.ConfigServer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
+@EnableConfigServer
 public class Application {
 
 	public static void main(String[] args) {
