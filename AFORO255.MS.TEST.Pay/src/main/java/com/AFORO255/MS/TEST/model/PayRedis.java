@@ -3,24 +3,12 @@ package com.AFORO255.MS.TEST.model;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="payment")
-public class Pay implements Serializable {
-
+public class PayRedis implements Serializable {
 	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_operation;
 	private Integer id_invoice;
 	private double amount;
-	private String date;
-	
+	private Timestamp date;
 	public Integer getId_operation() {
 		return id_operation;
 	}
@@ -39,13 +27,15 @@ public class Pay implements Serializable {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	public String getDate() {
+	public Timestamp getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Timestamp date) {
 		this.date = date;
 	}
-	
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
 	
 }
