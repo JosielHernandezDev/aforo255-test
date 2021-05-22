@@ -1,4 +1,4 @@
-package com.AFORO255.MS.TEST.Invoice;
+package com.AFORO255.MS.TEST.Gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
