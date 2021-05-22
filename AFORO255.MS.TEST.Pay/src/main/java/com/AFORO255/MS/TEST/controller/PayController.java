@@ -20,15 +20,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
+@RequestMapping("/v1/payevent")
 public class PayController {
 	@Autowired
 	private IPayService service;
 	@Autowired
 	PayEvent eventProducer;
 	private Logger log = LoggerFactory.getLogger(PayController.class);
-
 	@PostMapping("/v1/payevent")
 	/*@Timed(value = "postPayEvent", histogram = true, percentiles = { 0.95, 0.99 }, extraTags = { "app",
 			"postPayEvent" })*/
